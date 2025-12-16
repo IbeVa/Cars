@@ -1,0 +1,64 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "BMW",
+      "model": "M3",
+      "year": 2023,
+      "price": 75000,
+      "color": "Blauw",
+      "fuelType": "Benzine",
+      "imageURL": "bmw-m3"
+    },
+    {
+      "id": 2,
+      "brand": "Audi",
+      "model": "RS6",
+      "year": 2024,
+      "price": 120000,
+      "color": "Zwart",
+      "fuelType": "Benzine",
+      "imageURL": "audi-rs6"
+    },
+    {
+      "id": 3,
+      "brand": "Tesla",
+      "model": "Model S",
+      "year": 2023,
+      "price": 95000,
+      "color": "Wit",
+      "fuelType": "Elektrisch",
+      "imageURL": "tesla-models"
+    },
+    {
+      "id": 4,
+      "brand": "Mercedes",
+      "model": "AMG GT",
+      "year": 2024,
+      "price": 150000,
+      "color": "Zilver",
+      "fuelType": "Benzine",
+      "imageURL": "mercedes-amg"
+    },
+    {
+      "id": 5,
+      "brand": "Porsche",
+      "model": "911 Turbo",
+      "year": 2023,
+      "price": 180000,
+      "color": "Rood",
+      "fuelType": "Benzine",
+      "imageURL": "porsche-911"
+    },
+    {
+      "id": 6,
+      "brand": "Volkswagen",
+      "model": "ID.4",
+      "year": 2023,
+      "price": 45000,
+      "color": "Grijs",
+      "fuelType": "Elektrisch",
+      "imageURL": "vw-id4"
+    }
+  ]
+}
