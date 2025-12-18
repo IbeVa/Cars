@@ -2,11 +2,68 @@ import Foundation
 @Observable
 class DataManager {
     var cars: [Car] = []
-     
+    var favorites: [Car] = []
+    var selectedFuelType: String = "Prijs"
+    
+    func getCars(brandstof: String) -> [Car] {
+        var newCars: [Car] = []
+        if brandstof == "Alle" {
+            return cars
+        }else{
+            for c in cars{
+                if c.fuelType == brandstof {
+                    newCars.append(c)
+                }
+            }
+        }
+        return newCars
+    }
     
     func sort() {
-        cars.sort { car1, car2 in
-            return car1.id < car2.id
+        if selectedFuelType == "Jaar"{
+            cars.sort { car1, car2 in
+                return car1.year < car2.year
+            }
+        }else if selectedFuelType == "Prijs"{
+            cars.sort { car1, car2 in
+                return car1.price < car2.price
+            }
+        }else{
+            cars.sort { car1, car2 in
+                return car1.brand < car2.brand
+            }
+        }
+        
+    }
+    
+    func addFav(car:Car) {
+        favorites.append(car)
+    }
+    
+    func getFav() -> [Car]{
+        return favorites
+    }
+    
+    func isFav(car:Car) -> Bool {
+        for fav in favorites {
+            if fav.id == car.id {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func removeCar(newCar:Car) {
+        var newArray = cars.filter { car in
+            return newCar.id != car.id
+        }
+        favorites = newArray
+    }
+    
+    func removeCarFromFav(newCar:Car) {
+        favorites = favorites.filter { car in
+            return newCar.id != car.id
         }
     }
     

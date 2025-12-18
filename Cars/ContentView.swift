@@ -11,15 +11,15 @@ struct ContentView: View {
     var body: some View {
         TabView{
             Tab("Home", systemImage: "house"){
-                HomeView()
+                FilterView()
             }
             
             Tab("Favorieten", systemImage: "star.fill"){
-                
+                FavoritesView()
             }
             
             Tab("Instellingen", systemImage: "cog"){
-                
+                SettingsView()
             }
         }
     }
